@@ -1,2 +1,2 @@
 # Web_Project
-Contech Club Website
+Comtech Club Website
