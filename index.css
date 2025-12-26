@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px 30px;
+    color: white;
+}
+
+.nav-left, .nav-right{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-left a, .nav-right a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+} 
+
+
+h1 {
+    color: #333;
+}
