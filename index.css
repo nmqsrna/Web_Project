@@ -139,3 +139,36 @@ section{
     margin: 15px 0 10px;
 }
 
+/*footer section*/
+.footer {
+    background-color: #636262;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-container div{
+    flex: 1;
+    margin: 10px;
+}
+
+.footer a{
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer-bottom{
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
