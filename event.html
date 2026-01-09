@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Events | COMTECH Club</title>
+        <link rel="stylesheet" href="event.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        
+        <!--navigation bar-->
+        <div class="navbar">
+
+            <div class="nav-left">
+                <a href="about.html">About</a>
+                <a href="organizational-chart.html">People</a>
+                <a href="event.html">Event</a>
+                <a href="gallery">Gallery</a>
+            </div>
+
+            <!--comtech logo-->
+            <div class="logo"> 
+                <a href="index.html"> 
+                    <img src="comtech.png" alt="Comtech Logo" style="height: 100px; display: block; align-items: center;"> 
+                </a> 
+            </div>
+
+            <div class="nav-right">
+                <a href="#login">Login</a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/official_comtechumt/" target="">  | Instagram  |  </a>
+                    <a href="https://www.facebook.com/comtech.umt">  Facebook</a>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="events">
+            <h1>Upcoming Events</h1>
+            <p><i>No upcoming event.</i></p><br>
+            <h1>Events</h1>
+            <p>Join our activities and be part of COMTECH club!</p>
+
+            <!--Event 1-->
+            <div class="event-card">
+                <img src="event1.jpg" alt="event1" class="event-img">
+                <h2>CAPTURE THE FLAG 3.0</h2>
+                <p>[HACKATHON : CAPTURE THE FLAG 3.0]</p>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event1Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event1Desc" class="event-desc"> 
+                    <p>Assalamualaikum WBT dan Salam Sejahtera</p> 
+                    <p>Kami daripada PMFIK akan menjalankan program HACKATHON : CAPTURE THE FLAG 3.0 untuk menguji kemahiran mahasiswa/i dalam keselamatan siber dan penyelesaian cabaran digital.</p> 
+                    <p>🗓 Tarikh: 2-3 Januari 2026<br>
+                        📍 Tempat: Unisza Kampus Besut<br>
+                        💰 Yuran Pendaftaran: RM20</p> 
+
+                    <p><strong>Penyertaan boleh dilakukan dengan melayari:</strong></p> 
+                    <p>UniSZA: <a href="https://forms.gle/Kc8a7ebcRvSkRbhR8">https://forms.gle/Kc8a7ebcRvSkRbhR8</a></p> 
+                    <p>UMT: <a href="https://forms.gle/qQqnZMJNWBKMwsxG6">https://forms.gle/qQqnZMJNWBKMwsxG6</a></p> 
+                    <p>UMK: <a href="https://forms.gle/h8v9kHt9kAxyDvqb9">https://forms.gle/h8v9kHt9kAxyDvqb9</a></p><br> 
+
+                    <p><strong>Untuk sebarang pertanyaan, sila hubungi:</strong></p> 
+                    <p>Anis: <a href="https://wa.me/601151820920">WhatsApp</a></p> 
+                    <p>Zakiah: <a href="https://wa.me/60108398826">WhatsApp</a></p> 
+                    <p>Amsyar: <a href="https://wa.me/601114860554">WhatsApp</a></p> 
+                    
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event1Desc', this)">Less Info</button>
+                </div>
+            </div>
+
+            <!--Event 2-->
+            <div class="event-card">
+                <img src="event2.jpg" alt="event2" class="event-img">
+                <h2>SUKANEKA FSKM</h2>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event2Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event2Desc" class="event-desc"> 
+                    <p>Ayuh warga Fakulti Sains Komputer dan Matematik (FSKM)! 🌟</p> 
+                    <p>Jom sertai dan meriahkan SUKANEKA FSKM, satu program santai yang penuh keceriaan dan semangat kesukanan! 💪</p> 
+                    <p>📅 Tarikh: 6 Disember 2025 (Sabtu)<br>
+                        🕢 Masa: 7:30 pagi – 12:00 tengah hari<br>
+                        📍 Tempat: Pantai UMT</p> 
+
+                    <p><strong>🏅Pelajar Tahun 1 FSKM diwajibkan hadir.</strong></p> 
+                    <p>Program ini turut menjadi ‘bonding platform’ antara mentor dengan mentee, membina semangat kebersamaan dan mengeratkan jalinan kemesraan dalam kalangan pelajar FSKM! 🤝💙</p> 
+                    <p>🔗Link pendaftaran :  <a href="https://forms.gle/3yjEbV5SKixMeCio7">https://forms.gle/3yjEbV5SKixMeCio7</a></p> 
+
+                    <p>Marilah kita bersama-sama menjayakan aktiviti penuh ceria ini!</p> 
+                    <p>Jumpa anda di sana! 😄</p> 
+                    
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event2Desc', this)">Less Info</button>
+                </div>
+            </div>
+
+            <!--Event 3-->
+            <div class="event-card">
+                <img src="event3.jpg" alt="event3" class="event-img">
+                <h2>Pencarian Sekretariat</h2>
+                <p>🌐✨ PENCARIAN SEKRETARIAT COMTECH SESI 2025/2026 ✨🌐</p>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event3Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event3Desc" class="event-desc"> 
+                    <p>Assalamualaikum w.b.t dan Salam Sejahtera!</p> 
+                    <p>Kelab COMTECH UMT kini membuka peluang kepada semua mahasiswa/i UMT yang berminat untuk menjadi sebahagian daripada keluarga COMTECH sebagai Sekretariat Sesi 2025/2026!</p> 
+                    <p>COMTECH ialah sebuah kelab yang aktif dalam teknologi, inovasi dan pembangunan kemahiran pelajar. Sertai kami untuk tambah ilmu, bina pengalaman dan terlibat dalam program-program menarik sepanjang sesi nanti!</p><br>
+                    <p>📅 Tarikh Pendaftaran : 23 November 2025 – 4 Disember 2025</p> 
+
+                    <p>✨ Jawatan Sekretariat yang Ditawarkan</p> 
+                    <ul>
+                        <li>Komunikasi Korporat</li>
+                        <li>Exco Pembangunan Insan</li>
+                        <li>Exco Akademik dan Teknologi</li>
+                        <li>Exco Inovasi dan Keusahawanan</li>
+                        <li>Exco Jalinan Komuniti</li>
+                    </ul> 
+
+                    <p>Kalau anda seorang yang kreatif, suka belajar benda baru, minat teknologi atau nak cuba pengalaman berorganisasi, COMTECH adalah tempatnya! 🚀</p> 
+                    <p>J📌 Jika anda yang kami cari, ayuh sertai kami dengan cara *Scan QR Code* yang tertera atau *Tekan Link* di bawah untuk mendaftar</p>
+                    <p><a href="https://forms.gle/TjHqxzP46E6WMkRR8">Daftar Sekarang</a></p>
+                    <p>📞 Sebarang pertanyaan boleh diajukan kepada:</p>
+                    <ul>
+                        <li>Saudari Atikah : 010-379 1273</li>
+                        <li>Saudari Qistina: 018-276 6537</li>
+                    </ul>
+                    
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event3Desc', this)">Less Info</button>
+                </div>
+            </div>
+
+            <!--Event 4-->
+            <div class="event-card">
+                <img src="event4.jpg" alt="event4" class="event-img">
+                <h2>XVENTURE PITCH</h2>
+                <p>|| BENGKEL XVENTURE PITCH : TURNING VISION INTO REALITY ||</p>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event4Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event4Desc" class="event-desc"> 
+                    <p>Assalamualaikum dan salam perkasa pemimpin teknologi masa hadapan!</p> 
+                    <p>Kelab Mahasiswa Teknologi Komputer (COMTECH) dengan sukacitanya menjemput SEMUA PELAJAR SAINS KOMPUTER TAHUN 1, 2 & 3 untuk menyertai Program XVenture Pitch :</p> 
+                    <p>Turning Vision Into Reality, sebuah program eksklusif yang direka khas untuk memperkasakan pelajar dengan kemahiran pembentangan yang professional dan pendedahan awal alam pekerjaan kepada pelajar.</p><br>
+                    <p>✨ Butiran Program: <br>
+                        📆 TARIKH: 15 NOVEMBER 2025 (SABTU) <br>
+                        🕣 MASA: 8.00 PAGI – 4.00 PETANG <br>
+                        📍 TEMPAT: DEWAN PERSIDANGAN 3 (DP3)  <br>| UMTCC
+                        🎓 PENCERAMAH: TN. MOHD RUHAIFI BIN ALIAS <br>
+                        💵 YURAN: RM6</p> 
+
+                    <p>Program ini bertujuan untuk:</p> 
+                    <ul>
+                        <li>Memberikan pendedahan bagaimana pembentangan yang professional digunakan di alam pekerjaan</li>
+                        <li>Meningkatkan kemahiran pembentangan yang benar</li>
+                        <li>Membina semangat berjasama dalam kumpulan melalui pertandingan berkumpulan</li>
+                        <li>Meningkatkan kualiti pembuatan slaid yang tepat.</li>
+                        <li>Memberi kesedaran tentang realiti pekerjaan</li>
+                    </ul> 
+
+                    <p>Tempat terhad kepada 50 pelajar sahaja‼️ <br>
+                        Jadi, jangan lepaskan peluang keemasan ini — daftar segera untuk memastikan tempat anda!</p> 
+                    <p>PENDAFTARAN: <a href="https://forms.gle/voEn98SPmEJZqDwk6">https://forms.gle/voEn98SPmEJZqDwk6</a></p>
+                    <p>Sebarang pertanyaan, sila hubungi: </p> <br>
+                    <p>Ihsan: <a href="https://wa.me/+601112185992">WhatsApp</a></p>
+                    <p>Saerah: <a href="https://wa.me/+601112903772">WhatsApp</a></p>
+                    
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event4Desc', this)">Less Info</button>
+                </div>
+            </div>
+
+            <!--Event 5-->
+            <div class="event-card">
+                <img src="event5.jpg" alt="event5" class="event-img">
+                <h2>CAPTURE THE FLAG 3.0</h2>
+                <p>[HACKATHON: CAPTURE THE FLAG 3.0]</p>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event5Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event5Desc" class="event-desc"> 
+                    <p>Assalamualaikum & Salam Sejahtera</p> 
+                    <p>PMFIK akan menganjurkan HACKATHON: CAPTURE THE FLAG 3.0 untuk menguji kemahiran keselamatan siber dan penyelesaian cabaran digital!</p> <br>
+                    <p>📅 Tarikh: 6–8 November 2025 <br>
+                        📍 Tempat: UniSZA Kampus Besut <br>
+                        💸 Yuran: RM20</p> 
+
+                    <p>📌 Daftar Sekarang:</p> 
+                    <p>📅 tarikh tutup penyertaan: 31 Oktober 2025</p> <br>
+                    <p>⚠️ Terhad kepada 20 orang peserta sahaja!</p> <br>
+
+                    <p>🎁 Hadiah Menarik Menanti: <br>
+                        🥇 Gold Medal + Hamper <br>
+                        🥈 Silver Medal + Hamper <br>
+                        🥉 Bronze Medal + Hamper</p> <br>
+                    
+                    <p>Untuk sebarang pertanyaan, sila hubungi: </p> <br>
+                    <p>Akmal: <a href="https://wa.me/60193706218">WhatsApp</a></p>
+                    <p>Amirul: <a href="https://wa.me/601173243668"></a>WhatsApp</p>
+                    
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event5Desc', this)">Less Info</button>
+                </div>
+            </div>
+
+            <!--Event 6-->
+            <div class="event-card">
+                <img src="event6.jpg" alt="event6" class="event-img">
+                <h2>ANNUAL GRAND MEETING</h2>
+                <p>💻 ANNUAL GRAND MEETING 💻</p>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event6Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event6Desc" class="event-desc"> 
+                    <p>Assalamualaikum & Salam Sejahtera</p> 
+                    <p>COMTECH dengan sukacitanya menjemput semua ahli untuk menghadiri Annual Grand Meeting (AGM) Sesi 2025/2026.</p> <br>
+                    <p>📅 Tarikh: 16 Oktober 2025 (Khamis) <br>
+                        ⏰ Masa: 8:30 malam – 10:00 malam <br>
+                        📍 Platform: CISCO Webex</p> 
+
+                    <p>Kehadiran anda amat dialu-alukan bagi memastikan kelancaran perjalanan kelab serta memberikan sokongan kepada barisan kepimpinan yang baharu.</p> <br>
+                    <p>Sekian, Terima Kasih.</p> <br>
+                    <p>Ikhlas daripada, <br>
+                        COMTECH <br>
+                        Universiti Malaysia Terengganu <br>
+                        Sesi 2025/2026</p>
+                    
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event6Desc', this)">Less Info</button>
+                </div>
+            </div>
+            
+            <!--Event 7-->
+            <div class="event-card">
+                <img src="event7.jpg" alt="event7" class="event-img">
+                <h2>PENCARIAN AJK BARU 25/26</h2>
+                <p>PENCARIAN BARISAN MTME KELAB MAHASISWA TEKNOLOGI (COMTECH) BAGI SESI 2025/2026 🔍</p>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event7Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event7Desc" class="event-desc"> 
+                    <p>Assalamualaikum & Salam Sejahtera</p> 
+                    <p>Sukacita dimaklumkan, kami Barisan Kepimpinan Kelab Mahasiswa Teknologi Komputer (COMTECH) ingin mencari mereka yang berminat untuk menceburi bidang kepimpinan dengan menyertai Barisan Majlis Tertinggi dan Majlis Eksekutif (MTME) Kelab Mahasiswa Teknologi (COMTECH) bagi sesi 2025/2026.</p> <br>
+                    <p>🗓 Tarikh permohonan: Dibuka sehingga sehingga 10 Julai 2025</p> 
+
+                    <p>✍🏻 Permohonan boleh dibuat melalui mengimbas qr code atau pautan Google Form dibawah (sila guna email UMT) :</p>
+                    <p><a href="https://forms.gle/C7Hkw9jgikh9amqM6">https://forms.gle/C7Hkw9jgikh9amqM6</a></p> <br>
+                    <p>Sebarang pertanyaan boleh hubungi: </p>
+                    <p>Muhammad Syafiq Amirul Bin Zakaria</p>
+                    <p><a href="https://wa.me/601160756153">WhatsApp</a></p><br>
+
+                    <p>Jazlina Faizah Binti Jamaludin</p>
+                    <p><a href=" https://wa.me/60194488572">WhatsApp</a></p>
+                    
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event7Desc', this)">Less Info</button>
+                </div>
+            </div>
+
+            <!--Event 8-->
+            <div class="event-card">
+                <img src="event8.jpg" alt="event8" class="event-img">
+                <h2>ANNUAL DINNER COMTECH</h2>
+                <p>✨ JEMPUTAN KE MAJLIS ANNUAL DINNER COMTECH 2025 ✨</p>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event8Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event8Desc" class="event-desc"> 
+                    <p>🎬 “A Night to Remember, A Journey to Celebrate”</p>
+                    <p>Assalamualaikum & Salam Sejahtera</p> 
+                    <p>Dengan segala hormatnya, Kelab Mahasiswa Teknologi Komputer (COMTECH) ingin menjemput semua pelajar Sains Komputer Tahun 3, untuk bersama-sama memeriahkan Majlis Annual Dinner COMTECH 2025 — satu malam istimewa bagi meraikan detik-detik akhir sebelum melangkah ke fasa seterusnya.</p> <br>
+                    <p>📆 Tarikh: Jumaat, 20 Jun 2025 <br>
+                        🕰 Masa: 8:00 malam <br>
+                        📍 Tempat: Quinara Al-Safir Resort <br>
+                        🎭 Tema: Movie Characters (Jadi watak kegemaran anda!) <br>
+                        💵 Yuran: RM65/seorang</p> 
+
+                    <p>Majlis ini akan menjadi medan untuk kita bersama mengenang perjalanan selama tiga tahun, memberi penghargaan kepada usaha dan pencapaian, serta mengukir kenangan manis sebelum melangkah ke fasa baharu kehidupan.</p>
+                    <p>Antara aktiviti yang menarik menanti anda: <br>
+                        🎤 Ucapan penghargaan <br>
+                        🎶 Persembahan pelajar <br>
+                        🏆 Penyampaian anugerah <br>
+                        🍽 Makan malam istimewa</p>
+                    
+                    <p>Pendaftaran dibuka sehingga 9 Jun 2025!</p> <br>
+                    <p>📯 Link pendaftaran: <a href="https://forms.gle/jSiyR7uyhmpPLjx26">https://forms.gle/jSiyR7uyhmpPLjx26</a></p><br>
+                    <p>Jumpa anda di sana dalam gaya watak pilihan anda! Jangan lepaskan peluang untuk jadi sebahagian daripada malam penuh memori ini. 🌟</p><br>
+                    <p>Sekian, terima kasih</p>
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event8Desc', this)">Less Info</button>
+                </div>
+            </div>
+
+            <!--Event 9-->
+            <div class="event-card">
+                <img src="event9.jpg" alt="event9" class="event-img">
+                <h2>XVENTURE PITCH</h2>
+                <p>|| COMTECH XVENTURE PITCH: TRANSFORMASI IDEA KE REALITI ||</p>
+
+                <!-- See More button (shown by default) --> 
+                <button class="toggle-btn" onclick="showDescription('event9Desc', this)">See More</button> 
+                
+                <!-- Hidden description --> 
+                <div id="event9Desc" class="event-desc"> 
+                    <p>Assalamualaikum, salam sejahtera, dan salam perkasa pemimpin teknologi masa hadapan!</p><br>
+                    <p>Kelab Mahasiswa Teknologi Komputer (COMTECH) dengan sukacitanya ingin menjemput semua pelajar UMT untuk menyertai program Xventure Pitch: Transformasi Idea ke Realiti.</p>
+                    <p>Program ini bertujuan membimbing pelajar dalam membina, mengasah, dan mempersembahkan idea inovatif mereka melalui sesi perkongsian dan latihan intensif.</p> <br><br>
+                    <p>Butiran Program: <br>
+                        📅 TARIKH: 24 MEI 2025 (SABTU) <br>
+                        🕒 MASA: 8.30 PAGI – 4.00 PETANG <br>
+                        🧕🏻PENCERAMAH JEMPUTAN: CIK ZAINEBBEEVI KAMALBATCHA (PENSYARAH PPAL) <br>
+                        📍 LOKASI: MAKMAL PENGATURCARAAN 1 (MP1), FSKM <br>
+                        💰 YURAN: RM8 (BREAKFAST & LUNCH DISEDIAKAN)</p><br>
+
+                    <p>📌 Nilai tambah yang ditawarkan dalam program ini: <br>
+                        🔹 Bimbingan Pakar: Sesi eksklusif bersama penceramah jemputan, Cik Zainebbeevi Kamalbatcha (Pensyarah, PPAL). <br>
+                        🔹 Kemahiran Pembentangan: Peluang mengasah kemahiran menyampaikan idea dengan berkesan dan berimpak tinggi. <br>
+                        🔹 Rangkaian Profesional: Bertemu dan berkongsi idea bersama rakan-rakan sehaluan. <br>
+                        🔹 Pengiktirafan dan Ganjaran: Sijil penyertaan disediakan dan hadiah menarik menanti setiap pemenang!</p> <br>
+
+                    <p>Tempat adalah terhad kepada 30 orang peserta sahaja, jadi jangan lepaskan peluang ini! Sila daftar segera untuk memastikan tempat anda.</p>
+                    <p>PENDAFTARAN: <a href="https://forms.gle/LJqGeeF53YBBzV488">https://forms.gle/LJqGeeF53YBBzV488</a></p><br>
+
+                    <p><strong>E-sijil disediakan.</strong></p><br>
+
+                    <p>Sebarang pertanyaan, sila hubungi: <br>
+                        📞 Qis <a href="https://wa.me/+60182766537">WhatsApp</a><br>
+                        📞 Iffah <a href="https://wa.me/+601126427991">WhatsApp</a></p>
+
+                    <!-- Less Info button (only visible when description is shown) --> 
+                    <button class="toggle-btn less-btn" onclick="hideDescription('event9Desc', this)">Less Info</button>
+                </div>
+            </div>
+
+        </section>
+        
+    </body>
+
+    <!--Footer section-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="comtech.png" alt="Comtech-logo" style="height: 100px; width: auto; padding-left: 55px;">
+                <p>COMTECH, Inspiring Technologies</p>
+            </div>
+
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#event">Event</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h4>Contact</h4>
+                <p>Email: kelab.comtech@umt.edu.my</p>
+                <p>Location: University Malaysia Terengganu</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/official_comtechumt/" target="">Instagram</a>
+                    <a href="https://www.facebook.com/comtech.umt">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 COMTECH. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="event.js"></script>
+
+</html>
