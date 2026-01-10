@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comtech Club Gallery</title>
+    <link rel="stylesheet" href="gallery-style.css">
+    <link rel="stylesheet" href="contact-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="navbar">
+
+        <div class="nav-left">
+            <a href="join.html">Sign Up</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="organizational-chart.html">People</a>
+            <a href="event.html">Event</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="comtech.jpg" alt="Comtech Logo" style="height: 100px; display: block; margin: 0 auto;" href="index.html">
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#login">Login</a>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/official_comtechumt/" target="">  | Instagram</a>
+                <a href="https://www.facebook.com/comtech.umt">Facebook</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <header class="page-header">
+        <h1>Comtech Club Gallery</h1>
+        <p>A look back at our past events and club culture.</p>
+    </header>
+
+    <section class="gallery-section">
+        <h2>Events Highlights</h2>
+        <div class="photo-grid">
+            
+            <div class="photo-card" onclick="openModal('event1.jpg')">
+                <img src="event1.jpg" alt="Event Photo 1">
+                <div class="caption">Capture The Flag 3.0</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event2.jpg')">
+                <img src="event2.jpg" alt="Event Photo 2">
+                <div class="caption">Sukaneka FSKM</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event3.jpg')">
+                <img src="event3.jpg" alt="Event Photo 3">
+                <div class="caption">Pencarian Sekretariat</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event4.jpg')">
+                <img src="event4.jpg" alt="Event Photo ">
+                <div class="caption">XVenture Pitch</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event5.jpg')">
+                <img src="event5.jpg" alt="Event Photo 5">
+                <div class="caption">Capture The Flag 3.0</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event6.png')">
+                <img src="event6.png" alt="Event Photo 6">
+                <div class="caption">Annual Grand Meeting</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event7.png')">
+                <img src="event7.png" alt="Event Photo 7">
+                <div class="caption">Pencarian AJK Baru</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event8.png')">
+                <img src="event8.png" alt="Event Photo 4">
+                <div class="caption">Annual Dinner Comtech</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event9.png')">
+                <img src="event9.png" alt="Event Photo 9">
+                <div class="caption">XVenture Pitch</div>
+            </div>
+
+            <div class="photo-card" onclick="openModal('event10.png')">
+                <img src="event10.png" alt="Event Photo 10">
+                <div class="caption">UniEdu Connect</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Modal -->
+    <div id="photoModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <section class="slideshow-section">
+        <h2>Photo Slideshow</h2>
+        <div class="slideshow-container">
+            
+            <div class="mySlides fade">
+                <img src="event1.jpg" alt="Slide 1">
+                <div class="slide-caption">Event Highlights 2024</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event2.jpg" alt="Slide 2">
+                <div class="slide-caption">Team Building Activities</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event3.jpg" alt="Slide 3">
+                <div class="slide-caption">Workshop Sessions</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event4.jpg" alt="Slide 4">
+                <div class="slide-caption">Community Outreach</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event5.jpg" alt="Slide 5">
+                <div class="slide-caption">Competition</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event6.jpg" alt="Slide 6">
+                <div class="slide-caption">Annual Grand Meeting</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event7.jpg" alt="Slide 7">
+                <div class="slide-caption">Pencarian AJK Baru</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event8.jpg" alt="Slide 8">
+                <div class="slide-caption">Annual Dinner Comtech</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event9.jpg" alt="Slide 9">
+                <div class="slide-caption">Workshop</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event10.png" alt="Slide 10">
+                <div class="slide-caption">Community Outreach</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="logo_comtech.jpg" alt="" style="height: 40px;">
+                <p>COMTECH, Inspiring Technologies</p>
+            </div>
+
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#event">Event</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h4>Contact</h4>
+                <p>Email: kelab.comtech@umt.edu.my</p>
+                <p>Location: University Malaysia Terengganu</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/official_comtechumt/" target="">Instagram</a>
+                    <a href="https://www.facebook.com/comtech.umt">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 COMTECH. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="gallery-script.js"></script>
+</body>
+</html>
