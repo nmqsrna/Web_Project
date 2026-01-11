@@ -7,72 +7,115 @@ body {
 .logo, .page-header h1 {
   font-family: 'Orbitron', sans-serif;
 }
-/*navbar*/
-.navbar {
+/* navigation bar styles */
+.navbar{
     font-family: 'Orbitron', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
     background-color: white;
+    padding: 10px 30px;
     color: black;
 }
 
-.nav-left, .nav-right {
+.nav-left, .nav-right{
     display: flex;
     gap: 20px;
     flex: 1;
+    align-items: center;
 }
 
-.nav-left {
+.nav-left{
     justify-content: flex-start;
 }
 
-.nav-right {
+.nav-right{
     justify-content: flex-end;
 }
 
-.nav-left a, .nav-right a {
+.nav-left a, .nav-right a{
     color: black;
     text-decoration: none;
     font-weight: 500;
-}
+} 
 
-.nav-left a:hover, .nav-right a:hover {
+.nav-left a:hover, .nav-right a:hover{
     color: #00bcd4;
 }
 
-.logo {
+/* Dropdown for Event */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: #00bcd4;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.logo{
     font-size: 20px;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', serif;
     text-align: center;
 }
 
-.social-icons a {
-    margin-left: 10px;
-    color: black;
+.logo img{
+  height: 100px;
+  display: block;
+  margin: 0 auto;
 }
 
-.social-icons a:hover {
-    color: #00bcd4;
-}
-
-.nav-links {
-    list-style: none;
+.social-icons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    align-items: center;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+.social-icon {
+    font-size: 28px;
+    color: black;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: #f39c12;
+.social-icon:hover {
+    color: #00bcd4;
+    transform: scale(1.15);
+}
+
+.social-icon i {
+    display: block;
 }
 
 /*header*/
@@ -333,3 +376,4 @@ body {
         text-align: center;
     }
 }
+
