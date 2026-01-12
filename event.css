@@ -1,38 +1,164 @@
 body {
-    margin: 0;
-    background-color: #f5f5f5;
+  margin: 0;
+  background: #c9c9c9;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Navigation bar (unchanged) */
-.navbar {
-    font-family: 'Orbitron';
+/* navigation bar styles */
+.navbar{
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(162, 169, 227);
+    background-color: white;
     padding: 10px 30px;
     color: black;
 }
 
-.nav-left, .nav-right {
+.nav-left, .nav-right{
     display: flex;
     gap: 20px;
+    flex: 1;
+    align-items: center;
 }
 
-.nav-left a, .nav-right a {
+.nav-left{
+    justify-content: flex-start;
+}
+
+.nav-right{
+    justify-content: flex-end;
+}
+
+.nav-left a, .nav-right a{
     color: black;
     text-decoration: none;
     font-weight: 500;
+} 
+
+.nav-left a:hover, .nav-right a:hover{
+    color: #00bcd4;
 }
 
-.nav-left a:hover, .nav-right a:hover {
-    color: #335bdf;
+/* Dropdown for Event */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.logo {
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: #00bcd4;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.logo{
     font-size: 20px;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.logo img{
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.social-icons a i {
+    font-size: 22px;
+    margin-left: 15px;
+    color: black;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover .fa-instagram {
+    color: #e1306c;
+}
+
+.social-icons a:hover .fa-facebook-f {
+    color: #1877f2;
+}
+
+.social-icons a:hover .fa-youtube {
+    color: #ff0000;
+}
+
+.social-icons a:hover .fa-whatsapp {
+    color: #25D366;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.social-icon i {
+    display: block;
+}
+
+/*header*/
+.page-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #2c3e50;
+    color: #fff;
+    margin-top: 0; /* Pastikan tiada margin di atas */
+    width: 100%;   /* Pastikan ia memenuhi lebar skrin */
+}
+
+.upcoming-section {
+    display: flex;
+    justify-content: center; /* Memusatkan secara mendatar */
+    align-items: center;     /* Memusatkan secara menegak */
+    min-height: 80px;       /* Memberi ruang minimum supaya teks tidak terlalu rapat dengan header */
+    text-align: center;
+}
+
+.no-event-text {
+    color: #000000;          /* Tukar warna kepada hitam */
+    font-size: 1.2rem;       /* Besarkan sedikit tulisan */
+    font-weight: bold;       /* Tebalkan tulisan jika perlu */
+    margin: 0;               /* Buang margin default */
+    width: 100%;             /* Pastikan ia mengambil lebar penuh untuk text-align center */
+}
+
+/* Pastikan tajuk h1 tidak menolak header ke bawah */
+.page-header h1 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+section {
+  padding: 40px 20px;
+  margin-bottom: 20px;
 }
 
 .events, .achievements {
@@ -47,6 +173,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   background: #f9f9f9;
+  color: black;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
@@ -90,7 +217,7 @@ button:hover {
   border-radius: 12px;
   background: #ffffff;
   /* Tambah border yang kontra dengan background kelabu cerah */
-  border: 2px solid #0077cc; 
+  border: 2px solid #000000; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
@@ -100,7 +227,7 @@ button:hover {
   width: 80%; /* Kad jadi besar */
   display: block;
   margin: 20px auto;
-  border: 3px solid #005fa3;
+  border: 3px solid #1f5387;
 }
 
 /* Gambar jadi full poster bila aktif */
@@ -166,10 +293,9 @@ button:hover {
 
 /*footer section*/
 .footer {
-    background-color:  rgb(162, 169, 227);
-    color: rgb(32, 31, 45);
+    background-color:  #636262;
+    color: #fff;
     padding: 40px 20px;
-    font-family: sans-serif;
 }
 
 .footer-container{

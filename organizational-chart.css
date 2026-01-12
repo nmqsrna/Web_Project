@@ -1,199 +1,283 @@
+/* --- Asas Layout --- */
 body {
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    background-color: #f5f5f5;
+  margin: 0;
+  background: #c9c9c9;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
 }
 
-/* Navigation bar */
-.navbar {
+/* navigation bar styles */
+.navbar{
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(162, 169, 227);
+    background-color: white;
     padding: 10px 30px;
     color: black;
 }
 
-.nav-left, .nav-right {
+.nav-left, .nav-right{
     display: flex;
     gap: 20px;
+    flex: 1;
+    align-items: center;
 }
 
-.nav-left a, .nav-right a {
+.nav-left{
+    justify-content: flex-start;
+}
+
+.nav-right{
+    justify-content: flex-end;
+}
+
+.nav-left a, .nav-right a{
     color: black;
     text-decoration: none;
     font-weight: 500;
+} 
+
+.nav-left a:hover, .nav-right a:hover{
+    color: #00bcd4;
 }
 
-.nav-left a:hover, .nav-right a:hover {
-    color: #335bdf;
+/* Dropdown for Event */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.logo {
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: #00bcd4;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.logo{
     font-size: 20px;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', serif;
-}
-
-.bordered-section {
-    border: 3px solid #0077cc;   /* blue border for clarity */
-    border-radius: 12px;
-    padding: 20px;
-    margin: 40px auto;
-    max-width: 1200px;
-    background-color: #ffffff;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.bordered-section h2 {
-    background: #0077cc;
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.section h2, p {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-/* Organizational Chart Section */
-.orgchart {
-    padding: 60px 20px;
     text-align: center;
-    background-color: #f5f5f5;
 }
 
+.logo img{
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.social-icons a i {
+    font-size: 22px;
+    margin-left: 15px;
+    color: black;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover .fa-instagram {
+    color: #e1306c;
+}
+
+.social-icons a:hover .fa-facebook-f {
+    color: #1877f2;
+}
+
+.social-icons a:hover .fa-youtube {
+    color: #ff0000;
+}
+
+.social-icons a:hover .fa-whatsapp {
+    color: #25D366;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.social-icon i {
+    display: block;
+}
+/*header*/
+.page-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #2c3e50;
+    color: #fff;
+    margin-top: 0; /* Pastikan tiada margin di atas */
+    width: 100%;   /* Pastikan ia memenuhi lebar skrin */
+}
+
+/* Pastikan tajuk h1 tidak menolak header ke bawah */
+.page-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.orgchart {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Container untuk membolehkan scroll jika chart terlalu lebar */
 .chart-container {
-    display: flex;
-    justify-content: center;
+    width: 100%;
     overflow-x: auto;
     padding: 40px 0;
+    display: flex;
+    justify-content: center;
 }
 
+.org-tree h2, .orgchart h2 {
+    color: #2c3e50;
+}
+
+/* --- Struktur Hirarki (The Tree Logic) --- */
 .org-tree, .org-tree ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
     position: relative;
-    padding: 0;
+    padding: 20px 0 0 0;
     margin: 0;
 }
 
-.org-tree ul {
-    margin-top: 40px;
-}
-
-.org-tree li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-}
-
-/* Connector lines */
-.org-tree li::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-top: 2px solid #01074f;
-    width: 0;
-    height: 20px;
-}
-
-.org-tree li:only-child::before {
-    display: none;
-}
-
+/* Garisan menegak dari parent ke bawah */
 .org-tree ul::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    border-top: 2px solid #ccc;
+    left: 50%;
+    border-left: 2px solid #2c3e50;
+    width: 0;
     height: 20px;
-    margin: auto;
 }
 
-/* Rectangular Role Cards with Color */
+.org-tree li {
+    text-align: center;
+    position: relative;
+    padding: 20px 10px 0 10px;
+}
+
+/* Garisan mendatar untuk menyambung adik-beradik (siblings) */
+.org-tree li::before, .org-tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #2c3e50;
+    width: 50%;
+    height: 20px;
+}
+
+.org-tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid #2c3e50;
+}
+
+/* Buang garisan yang berlebihan di hujung kiri dan kanan */
+.org-tree li:only-child::after, .org-tree li:only-child::before {
+    display: none;
+}
+
+.org-tree li:only-child {
+    padding-top: 0;
+}
+
+.org-tree li:first-child::before, .org-tree li:last-child::after {
+    border: 0 none;
+}
+
+/* Tambah garisan tegak untuk anak yang terakhir di sebelah kanan */
+.org-tree li:last-child::before {
+    border-right: 2px solid #2c3e50;
+    border-radius: 0 5px 0 0;
+}
+
+.org-tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+/* --- Gaya Kad (Role Card) --- */
 .role-card {
-    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-    border-left: 6px solid #00bcd4;
-    border-radius: 8px;
-    width: 280px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: left;
-    font-family: 'Orbitron', sans-serif;
-    transition: transform 0.3s ease;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: 5px solid #000000; /* Warna identiti */
+    border-radius: 10px;
+    width: 220px; /* Saiz lebih kecil supaya muat banyak */
+    padding: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .role-card:hover {
     transform: translateY(-5px);
-}
-
-.role-card h3 {
-    margin: 0 0 5px;
-    font-size: 18px;
-    color: #0028c9;
-}
-
-.role-card p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #333;
-    line-height: 1.4;
-}
-
-/* Optional: Different colors for levels */
-.role-card:nth-child(1) {
-    background: linear-gradient(135deg, #cdd6f7, #9daaff);
-    border-left-color: #060e69;
-}
-
-.role-card:nth-child(2) {
-    background: linear-gradient(135deg, #dcedc8, #c5e1a5);
-    border-left-color: #8bc34a;
-}
-
-.role-card:nth-child(3) {
-    background: linear-gradient(135deg, #f8bbd0, #f48fb1);
-    border-left-color: #e91e63;
-}
-
-.role-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 8px;
-    background: #fff;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-.role-content {
-    display: flex;              /* places image and text side by side */
-    align-items: center;        /* vertically aligns them */
-    justify-content: center;    /* centers them horizontally */
-    gap: 10px;                  /* space between photo and name */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .profile-photo {
-    width: 150px;                /* adjust size */
-    height: 150px;
-    border-radius: 50%;         /* makes it circular */
-    object-fit: cover;          /* ensures proper cropping */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.role-card h3 {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #19528c;
+    text-transform: uppercase;
+}
+
+.role-card p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+/* Penasihat Special Style */
+.advisor-card {
+    border-top-color: #ff9800;
 }
 
 /*footer section*/
 .footer {
-    background-color:  rgb(162, 169, 227);
-    color: rgb(32, 31, 45);
+    background-color:  #636262;
+    color: #fff;
     padding: 40px 20px;
-    font-family: sans-serif;
 }
 
 .footer-container{

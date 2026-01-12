@@ -1,0 +1,71 @@
+// Slideshow functionality
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+// Auto advance slides every 4 seconds
+setInterval(function() {
+    plusSlides(1);
+}, 4000);
+
+// Lightbox Modal functionality
+function openModal(imageSrc) {
+    const modal = document.getElementById('photoModal');
+    const modalImg = document.getElementById('modalImg');
+    modal.style.display = 'flex';
+    modalImg.src = imageSrc;
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('photoModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Dropdown toggle on click
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownContent = document.querySelector('.dropdown-content');
+const dropdown = document.querySelector('.dropdown');
+
+dropdownToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+    }
+});
