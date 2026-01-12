@@ -52,79 +52,101 @@
     ]
   };
 
-  const facultySelect = document.getElementById("faculty");
-  const programmeSelect = document.getElementById("programme");
+//program
+const facultySelect = document.getElementById("faculty");
+const programmeSelect = document.getElementById("programme");
 
-  facultySelect.addEventListener("change", function() {
-    const selectedFaculty = this.value;
-    programmeSelect.innerHTML = '<option value="">-- Pilih Program --</option>'; // reset
+facultySelect.addEventListener("change", function () {
+  const selectedFaculty = this.value;
 
-    if (selectedFaculty && programmes[selectedFaculty]) {
-      programmes[selectedFaculty].forEach(prog => {
-        const opt = document.createElement("option");
-        opt.value = prog;
-        opt.textContent = prog;
-        programmeSelect.appendChild(opt);
-      });
-    }
-  });
+  // Reset programme dropdown
+  programmeSelect.innerHTML = '<option value="">-- Select Programme --</option>';
 
+  if (programmes[selectedFaculty]) {
+    programmes[selectedFaculty].forEach(programme => {
+      const option = document.createElement("option");
+      option.value = programme;
+      option.textContent = programme;
+      programmeSelect.appendChild(option);
+    });
+  }
+});
 
 //payment
 const form = document.getElementById("eventForm");
 const paymentRadios = document.querySelectorAll('input[name="paymentMethod"]');
 const qrSection = document.getElementById("qrSection");
 const paymentDone = document.getElementById("paymentDone");
-
-paymentRadios.forEach(radio => {
-    radio.addEventListener("change", () => {
-        if (radio.value === "qr") {
-            qrSection.style.display = "block";
-        } else {
-            qrSection.style.display = "none";
-            paymentDone.checked = false;
-        }
-    });
-});
-
-form.addEventListener("submit", function (e) {
-    const selectedPayment = document.querySelector('input[name="paymentMethod"]:checked');
-
-    if (selectedPayment && selectedPayment.value === "qr" && !paymentDone.checked) {
-        alert("Please complete the payment before submitting the form.");
-        e.preventDefault();
-    }
-});
-
-//receipt
 const receiptInput = document.getElementById("receipt");
 
 paymentRadios.forEach(radio => {
-    radio.addEventListener("change", () => {
-        if (radio.value === "qr") {
-            qrSection.style.display = "block";
-        } else {
-            qrSection.style.display = "none";
-            paymentDone.checked = false;
-            receiptInput.value = "";
-        }
-    });
-});
-
-form.addEventListener("submit", function (e) {
-    const selectedPayment = document.querySelector('input[name="paymentMethod"]:checked');
-
-    if (selectedPayment && selectedPayment.value === "qr") {
-        if (!paymentDone.checked) {
-            alert("Please confirm that you have completed the payment.");
-            e.preventDefault();
-            return;
-        }
-
-        if (!receiptInput.files.length) {
-            alert("Please upload your payment receipt.");
-            e.preventDefault();
-        }
+  radio.addEventListener("change", () => {
+    if (radio.value === "qr") {
+      qrSection.style.display = "block";
+    } else {
+      qrSection.style.display = "none";
+      paymentDone.checked = false;
+      receiptInput.value = "";
     }
+  });
 });
+
+//submit
+// form.addEventListener("submit", function (e) {
+//   const selectedPayment = document.querySelector('input[name="paymentMethod"]:checked');
+
+//   if (!selectedPayment) {
+//     alert("Please select a payment method.");
+//     e.preventDefault();
+//     return;
+//   }
+
+//   if (selectedPayment.value === "qr") {
+//     if (!paymentDone.checked) {
+//       alert("Please confirm that you have completed the payment.");
+//       e.preventDefault();
+//       return;
+//     }
+
+//     if (!receiptInput.files.length) {
+//       alert("Please upload your payment receipt.");
+//       e.preventDefault();
+//       return;
+//     }
+//   }
+
+//   });
+
+// submit
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop default form submission
+
+  const selectedPayment = document.querySelector(
+    'input[name="paymentMethod"]:checked'
+  );
+
+  if (!selectedPayment) {
+    alert("Please select a payment method.");
+    return;
+  }
+
+  if (selectedPayment.value === "qr") {
+    if (!paymentDone.checked) {
+      alert("Please confirm that you have completed the payment.");
+      return;
+    }
+
+    if (!receiptInput.files.length) {
+      alert("Please upload your payment receipt.");
+      return;
+    }
+  }
+
+  // ✅ SUCCESS MESSAGE
+  alert("Thank you for submitting your registration!");
+
+  // ✅ REDIRECT AFTER OK
+  window.location.href = "event.html";
+});
+
 

@@ -1,0 +1,10 @@
+.form-card {
+    max-width: 700px;   /* perfect for forms */
+    width: 100%;
+}
+
+.form-control,
+.form-select {
+    padding: 8px 12px;
+    font-size: 15px;
+}
