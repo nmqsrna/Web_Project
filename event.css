@@ -93,24 +93,31 @@ body {
   margin: 0 auto;
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.social-icon {
-    font-size: 28px;
+.social-icons a i {
+    font-size: 22px;
+    margin-left: 15px;
     color: black;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-icon:hover {
-    color: #00bcd4;
-    transform: scale(1.15);
+.social-icons a:hover .fa-instagram {
+    color: #e1306c;
+}
+
+.social-icons a:hover .fa-facebook-f {
+    color: #1877f2;
+}
+
+.social-icons a:hover .fa-youtube {
+    color: #ff0000;
+}
+
+.social-icons a:hover .fa-whatsapp {
+    color: #25D366;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
 }
 
 .social-icon i {
