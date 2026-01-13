@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background: #c9c9c9;
-  color: #ffffff;
+  background: #ffffff;
+  color: #333;
   font-family: 'Lato', sans-serif;
 }
 
@@ -57,7 +57,7 @@ body {
     position: absolute;
     background-color: white;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px #2c3e50;
     border-radius: 8px;
     z-index: 1000;
     margin-top: 10px;
@@ -161,6 +161,30 @@ section {
   margin-bottom: 20px;
 }
 
+.register-event {
+  text-align: center;
+}
+
+.register-event p{
+  text-align: center;
+  color: black;
+  font-family: sans-serif;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none; /* Removes the underline */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Darkens on hover */
+}
+
 .events, .achievements {
   text-align: center;
   padding: 40px;
@@ -215,9 +239,9 @@ button:hover {
   margin: 20px;
   padding: 20px;
   border-radius: 12px;
-  background: #ffffff;
+  background: #bbcddf;
   /* Tambah border yang kontra dengan background kelabu cerah */
-  border: 2px solid #000000; 
+  border: 2px solid #2c3e50; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
@@ -227,7 +251,7 @@ button:hover {
   width: 80%; /* Kad jadi besar */
   display: block;
   margin: 20px auto;
-  border: 3px solid #1f5387;
+  border: 3px solid #2c3e50;
 }
 
 /* Gambar jadi full poster bila aktif */
@@ -293,34 +317,42 @@ button:hover {
 
 /*footer section*/
 .footer {
-    background-color:  #636262;
-    color: #fff;
-    padding: 40px 20px;
+  background: #cce0f5;
+  color: #2c2834;
+  padding: 40px 20px;
 }
 
-.footer-container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.footer-container div{
-    flex: 1;
-    margin: 10px;
+.footer-container div {
+  flex: 1;
+  margin: 10px;
 }
 
-.footer a{
-    color: #0202cb;
-    text-decoration: none;
+.footer a {
+  color: #3422fb;
+  text-decoration: none;
 }
 
-.footer a:hover{
-    text-decoration: underline;
+.footer a:hover {
+  text-decoration: underline;
 }
 
-.footer-bottom{
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #555;
-    padding-top: 10px;
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
 }
