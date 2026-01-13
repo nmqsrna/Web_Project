@@ -140,90 +140,66 @@ body {
     padding-top: 10px;
 }
 
-.orgchart {
-    padding: 50px 20px;
-    text-align: center;
+.advisor-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Light contrast from the white body */
 }
 
-/* Container untuk membolehkan scroll jika chart terlalu lebar */
-.chart-container {
+.advisor-card {
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 800px;
     width: 100%;
-    overflow-x: auto;
-    padding: 40px 0;
-    display: flex;
-    justify-content: center;
 }
 
-.org-tree h2, .orgchart h2 {
+.advisor-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2c3e50;
+}
+
+.advisor-info h2 {
+    margin: 10px 0 5px 0;
+    font-family: sans-serif;
     color: #2c3e50;
+    font-size: 1.5rem;
 }
 
-/* --- Struktur Hirarki (The Tree Logic) --- */
-.org-tree, .org-tree ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    position: relative;
-    padding: 20px 0 0 0;
-    margin: 0;
+.advisor-info p {
+    color: #666;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Garisan menegak dari parent ke bawah */
-.org-tree ul::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    border-left: 2px solid #2c3e50;
-    width: 0;
-    height: 20px;
+.badge {
+    background: #2c3e50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
-.org-tree li {
-    text-align: center;
-    position: relative;
-    padding: 20px 10px 0 10px;
+
+/* Mobile Responsive for Advisor Card */
+@media screen and (max-width: 600px) {
+    .advisor-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
 }
 
-/* Garisan mendatar untuk menyambung adik-beradik (siblings) */
-.org-tree li::before, .org-tree li::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 50%;
-    border-top: 2px solid #2c3e50;
-    width: 50%;
-    height: 20px;
-}
-
-.org-tree li::after {
-    right: auto;
-    left: 50%;
-    border-left: 2px solid #2c3e50;
-}
-
-/* Buang garisan yang berlebihan di hujung kiri dan kanan */
-.org-tree li:only-child::after, .org-tree li:only-child::before {
-    display: none;
-}
-
-.org-tree li:only-child {
-    padding-top: 0;
-}
-
-.org-tree li:first-child::before, .org-tree li:last-child::after {
-    border: 0 none;
-}
-
-/* Tambah garisan tegak untuk anak yang terakhir di sebelah kanan */
-.org-tree li:last-child::before {
-    border-right: 2px solid #2c3e50;
-    border-radius: 0 5px 0 0;
-}
-
-.org-tree li:first-child::after {
-    border-radius: 5px 0 0 0;
-}
 
 /* --- Gaya Kad (Role Card) --- */
 .role-card {
