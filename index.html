@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
@@ -14,27 +15,45 @@
     <div class="navbar">
 
         <div class="nav-left">
-                <a href="about.html">About</a>
-                <a href="organizational-chart.html">People</a>
-                <a href="#event">Event</a>
-                <a href="gallery">Gallery</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="organizational-chart.html">Organizational Chart</a>
+            <div class="dropdown">
+                <a class="dropdown-toggle">Program</a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">Gallery</a>
+                    <a href="event.html">Events</a>
+                </div>
+            </div>
+            <!-- <a href="contact.html">Contact Us</a> -->
         </div>
 
         <!--comtech logo-->
         <div class="logo">
             <a href="index.html">
-                <img src="comtech.png" alt="Comtech Logo" style="height: 100px; display: block; margin: 0 auto;" href="index.html">
-                <!--<div style="font-size: 20px; font-family:Georgia, 'Times New Roman', Times, serif;">Comtech  |  The Club</div>-->
+                <img src="comtech.png" alt="Comtech Logo">
             </a>
         </div>
 
         <div class="nav-right">
-            <a href="#login">Login</a>
             <div class="social-icons">
-                <a href="https://www.instagram.com/official_comtechumt/" target="">  | Instagram | </a>
-                <a href="https://www.facebook.com/comtech.umt">Facebook</a>
-            </div>
+                
+                <a href="contact.html">Contact Us</a>
 
+                <a href="https://www.instagram.com/official_comtechumt/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/comtech.umt" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/@comtechumt4990" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://chat.whatsapp.com/J70zQMnldAVDCMLgigXqbp" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                
+            </div>
         </div>
     </div>
 
@@ -42,31 +61,57 @@
     <section class="hero">
         <div class="slideshow-container">
             <div class="slide fade">
-                <img src="ann00.jpg" alt="" style="width: 100%;">
+                <img src="ann00.jpg" alt="" >
             </div>
             <div class="slide fade">
-                <img src="ann02.jpg" alt="" style="width: 100%;">
+                <img src="ann02.jpg" alt="" >
             </div>
             <div class="slide fade">
-                <img src="ann03.jpg" alt="" style="width: 100%;">
+                <img src="ann03.jpg" alt="" >
+        </div>
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </section>
 
-    <!--quick links: button-->
-    <!-- <section class="quick-links">
-        <div class="quick-links">
-            <a href="#events" class="btn">Upcaoming Event</a>
-            <a href="#donate" class="btn">Donate</a>
-            <a href="#gallery" class="btn">Gallery</a>
-            <a href="#contact" class="btn">Contact Us</a>
+    <!--announcement section-->
+    <section class="announcement">
+        <h2>Latest Announcements</h2>
+
+        <div class="announcement-list">
+            <div class="announcement-card">
+                <h3>COMTECH Recruiment 2026</h3>
+                <p>We are opening registration for new members. Interested student are encouraged to join.</p>
+                <span class="announcement-date">Jan 2026</span>
+            </div>
+
+            <div class="announcement-card">
+                <h3>Web Development Workshop</h3>
+                <p>An introduction workshop on HTML, CSS and JavaScript for beginners.</p>
+                <span class="announcement-date">Feb 2026</span>
+            </div>
+
+            <div class="announcement-card">
+                <h3>Important Notice</h3>
+                <p>Please check the event calendar for updated schedule and venues.</p>
+                <span class="announcement-date">Updated</span>
+            </div>
+
         </div>
-    </section> -->
+
+    </section>
 
     <!--event: calendar-->
-    <section class="events">
+    <section class="events" id="event">
         <h2>Upcoming Events</h2>
-        <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=Asia%2FKuala_Lumpur" frameborder="0"
-        style="border: 0" width="800" height="600" scrolling="no">
+        <iframe src="https://calendar.google.com/calendar/embed?src=comtechclubumt%40gmail.com&ctz=Asia%2FKuala_Lumpur" 
+        frameborder="0" style="border: 0" width="800" height="600" scrolling="no">
         </iframe>
     </section>
     
@@ -97,14 +142,16 @@
         </div>
     </section>
 
-    <!--gallery -->
-    <!-- <section class="gallery-preview">
-        <h2>Gallery Preview</h2>
-        <div class="slideshow-container">
+    <!--event call to action section-->
+    <section class="event-cta">
+        <h2>Stay Updated with Our Events</h2>
+        <p>Explore upcoming activities and participate in our club events.</p>
+        <a href="#event" class="event-btn">View Full Event Calendar</a>
+    </section>
 
-        </div>
-
-    </section> -->
+    <button id="backToTop" title="Back to top">
+    ↑
+    </button>
 
     <!--footer-->
     <footer class="footer">
@@ -126,11 +173,17 @@
 
             <div class="footer-right">
                 <h4>Contact</h4>
-                <p>Email: kelab.comtech@umt.edu.my</p>
+                <p>Email:
+                    <a href="mailto:kelab.comtech@umt.edu.my" class="email-link">
+                        kelab.comtech@umt.edu.my
+                    </a>
+                </p>
                 <p>Location: University Malaysia Terengganu</p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/official_comtechumt/" target="">Instagram</a>
                     <a href="https://www.facebook.com/comtech.umt">Facebook</a>
+                    <a href="https://www.youtube.com/@comtechumt4990">Youtube</a>
+                    <a href="https://chat.whatsapp.com/J70zQMnldAVDCMLgigXqbp">WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -138,8 +191,11 @@
             <p>&copy; 2025 COMTECH. All rights reserved.</p>
         </div>
     </footer>
+
+
+    <script src="index.js"></script>
+
     
-<script src="index.js"></script>
 </body>
 </html>
 
