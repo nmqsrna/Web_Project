@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSmoothScroll();
     initializeAnimations();
     setupAccessibility();
-    console.log('%c✅ Organizational Chart Loaded Successfully!', 'color: #2c3e50; font-size: 16px; font-weight: bold;');
-    console.log('%c🎯 Features Active:', 'color: #3498db; font-size: 14px; font-weight: bold;');
+    console.log('%c Organizational Chart Loaded Successfully!', 'color: #2c3e50; font-size: 16px; font-weight: bold;');
+    console.log('%c Features Active:', 'color: #3498db; font-size: 14px; font-weight: bold;');
     console.log('%c   ✓ Dropdown navigation', 'color: #7f8c8d; font-size: 12px;');
     console.log('%c   ✓ Table hover effects', 'color: #7f8c8d; font-size: 12px;');
     console.log('%c   ✓ Image zoom on click', 'color: #7f8c8d; font-size: 12px;');
